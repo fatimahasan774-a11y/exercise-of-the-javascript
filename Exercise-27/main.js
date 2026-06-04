@@ -1,7 +1,7 @@
 function getUserData(){
     return new Promise ((resolve, reject)=>{
         setTimeout(()=>{
-            const success=true;
+            const success=false;
             if(success){
                 resolve({id:1, name: "fatima"})
             }else{
@@ -14,3 +14,5 @@ function getUserData(){
 getUserData()
 .then(data => console.log("user data:", data))
 .catch(error => console.error("error:", error));
+
+
