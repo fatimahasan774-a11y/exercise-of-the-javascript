@@ -1,0 +1,10 @@
+{
+    "id": 1,
+    "name": "fatima",
+    "city": "hargeisa",
+  "'order'" : [
+        {"id": 1, "product": "lapton", "qualitiy": "2" },
+        {"id": 2, "product": "mouse", "qualitiy": "20" },
+
+    ]
+}
