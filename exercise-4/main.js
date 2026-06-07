@@ -11,22 +11,22 @@
 // console.log(message)
 
 
-function fetchUserDate(){
-    return new Promise((resolve, reject)=>{
-        setTimeout(()=>{
-            const success = true;
-            if(success){
-                resolve({id: 1, name: "fatima"});
-            }else{
-                reject("failed to fetch user data");
-            }
-        },1000) 
-    });
-}
+// function fetchUserDate(){
+//     return new Promise((resolve, reject)=>{
+//         setTimeout(()=>{
+//             const success = true;
+//             if(success){
+//                 resolve({id: 1, name: "fatima"});
+//             }else{
+//                 reject("failed to fetch user data");
+//             }
+//         },1000) 
+//     });
+// }
 
-fetchUserDate()
-.then(data => console.log("user data:", data))
-.catch(error => console.error("Error:", error));
+// fetchUserDate()
+// .then(data => console.log("user data:", data))
+// .catch(error => console.error("Error:", error));
 
 // function fetchUserData() {
 //     return new Promise((resolve, reject) => {
@@ -44,3 +44,35 @@ fetchUserDate()
 // fetchUserData()
 //     .then(data => console.log("User Data:", data))
 //     .catch(error => console.error("Error:", error));
+
+
+
+// function greet(name){
+//     console.log("hello", name)
+// }
+// function processUserInput(callback){
+//     const name =prompt("enter your name")
+
+//     callback(name)
+
+
+// }
+// processUserInput(greet)
+
+
+
+
+function opareter(a,b,callback){
+    return callback(a,b)
+}
+
+function add(a,b){
+     return a+b
+}
+
+function sub(a,b){
+    return a-b
+}
+
+console.log("addition", opareter(10,10 ,add))
+console.log("substractio", opareter(30,10,sub))
