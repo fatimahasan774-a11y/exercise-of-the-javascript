@@ -1,19 +1,23 @@
-function changeImage(){
-    const image =document.querySelector('#image');
-    
-    let url = prompt(" enter your iamge");
-    let border =prompt("enter image border");
-    let size = prompt("enter image size");
-    let backgroundcolor= prompt ("enter your backgroun-color");
-    let padding =prompt ("enter your padding")
- 
-    
-    image.setAttribute('src', url, border ,size, backgroundcolor,padding);
+// const  button = document.querySelector("#myButton")
+// const  removeButton = document.querySelector("#removeButton")
 
-    image.style.border= border;
-    image.style.width= size+'px';
-    image.style.backgroundColor = backgroundcolor;
-    image.style.padding= padding +'px';
+// function handleClick(){
+//     console.log('click button')
+// }
+
+// button.addEventListener('click', handleClick);
+
+// removeButton.addEventListener('click', function(){
+// button.removeEventListener('click', handleClick);
+// console.log('remove click event')
+// })
 
 
-}
+
+const color = document.querySelector('#color');
+const selectorcolor = document.querySelector('#selectorcolor');
+
+color.addEventListener('change', function(){
+    console.log('change is' ,color.value)
+selectorcolor.textContent = `select color: ${color.value}`
+})
