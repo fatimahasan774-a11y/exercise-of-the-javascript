@@ -25,7 +25,7 @@ addBtn.addEventListener('click', function () {
   const desc = descInput.value.trim();
 
   if (title === '' || desc === '') {
-    alert('Fadlan buuxi ugu yaraan cinwaanka iyo sharaxaadda.');
+    alert("please fill this page");
     return;
   }
 

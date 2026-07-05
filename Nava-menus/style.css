@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.nav-bars{
+    background-color: #444;
+    display: flex;
+    justify-content: space-between;
+    /* text-align: center; */
+    padding: 20px 20px;
+    font-size: 1.1rem;
+    
+}
+.title{
+color: #fff;
+font-size: 1.5rem;
+}
+.navbar-links{
+    height: 100%;
+    display: flex;
+}
+
+.navbar-links ul{
+    display: flex;
+    gap: 10px;
+    list-style: none;
+
+    
+
+
+}
+.navbar-links li a{
+    text-decoration: none;
+    color: white;
+}
+.navbar-links li a:hover{
+    background-color: #333;
+    padding: 10px;
+}
+
+.toggle-button {
+    position: absolute;
+    display: none;
+    top: 15px;
+    right: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.contact{
+    width: 100%;
+}
+
+.page{
+    width: 100%;
+    min-height: calc(100vh - 50px); /* beddel 50px haddii navbar-kaagu kale yahay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+}
+#home{
+    background-color: red;
+    
+}
+#about{
+    background-color: aqua;
+}
+#service{
+    background-color: black;
+    color: #fff;
+}
+#blog{
+    background-color: brown;
+}
+#contact{
+    background-color: orange;
+}
+#careers{
+    background-color: darkblue;
+}
+#protfolio{
+    background-color: blueviolet;
+}
+
+
+@media(max-width: 768px){
+
+    .nav-bars{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .toggle-button{
+        display: flex;
+    }
+    .navbar-links{
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.5s ease-out , opacity 0.5s ease-in-out;
+
+    }
+    .navbar-links ul{
+        display: flex;
+        flex-direction: column;
+        width: 100%;        
+    }
+    .navbar-links li{
+       text-align: center;
+    }
+
+     .navbar-links a {
+        padding: 10px;
+        line-height: 20px;
+    }
+
+    .nav-bars.active .navbar-links {
+        max-height: 300px;
+        opacity: 1;
+       transition: max-height 1.5s ease-out , opacity 1.5s ease-in-out;
+    }
+
+    /* Change the toggle button bars for the open state */
+    .nav-bars.active .toggle-button .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .nav-bars.active .toggle-button .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .nav-bars.active .toggle-button .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+}
